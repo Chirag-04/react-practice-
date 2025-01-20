@@ -1,0 +1,21 @@
+.type{
+    color: red;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2.3em;
+    width: 50%;
+}
+
+.name{
+    font-size: 1.5em;
+    list-style: none;
+}
+
+.sports{
+    border: 1px solid black;
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}

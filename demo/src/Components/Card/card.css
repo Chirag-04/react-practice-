@@ -1,0 +1,22 @@
+.card{
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px;
+    border: 2px solid #1101013a;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    background-color: rgba(255, 228, 196, 0.4);
+}
+
+.heading{
+    color:lightcoral;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-image{
+    border-radius: 50%;
+    max-width: 70%;
+    margin-bottom: 20px;
+}

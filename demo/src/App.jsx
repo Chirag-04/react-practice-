@@ -1,10 +1,9 @@
 import React from 'react'
-import Btn from './Components/Btn/Btn';
-import Counter from './Components/Counter';
+import Event from './Components/Event';
 const App = () => {
   return (
     <div>
-      <Counter/>
+      <Event/>
     </div>
   )
 }

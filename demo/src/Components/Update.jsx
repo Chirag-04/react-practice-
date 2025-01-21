@@ -1,45 +1,25 @@
 import React, { useState } from 'react'
 
 export const Update = () => {
-    const [name , setName] =  useState("");
-    const [age , setAge] =  useState("");
-    const [info , setInfo] = useState({
-        "name" : "John Doe",
-        "age" : 12,
-    })
-    const updateName=(e)=>{
-        console.log(e.target.value)
-        // setName(e.target.value);
-        setName(function(prevName){
-            return e.target.value;
-        });
-    }
-    const updateAge=(e)=>{
-        console.log(e.target.value)
-        // setAge(e.target.value)
-        setAge(function(age){
-            return e.target.value;
-        });
-    }
-    const updateInfo=()=>{
-        console.log("name",name)
-        console.log("age",age)
-        setInfo((prevInfo)=>({
-            ...prevInfo,
-            name : name,
-            age :  age,
-        }))
+    const [player , setPlayer] =  useState(["Rohit" , "Virat" , "Bumrah"]);
+    const handleClick=()=>{
+        const newName = document.getElementById("box").value;
+        document.getElementById("box").value = " ";
+        console.log(newName)
+        // setPlayer([...player ,newName]);
+        setPlayer((prevArray)=>[...prevArray , newName])
     }
   return (
     <div>
-        <div>
-            <p>User Name : {info.name}</p>
-            <p>Age : {info.age}</p>
-        </div>
-        
-        <input placeholder='Enter user name' onChange={(e)=>updateName(e)}/><br/><br/>
-        <input placeholder='Enter age'onChange={(e)=>updateAge(e)} /><br/><br/>
-        <button onClick={updateInfo} >Submit</button>
+        <h1>List of Cricketers</h1>
+        <ul>
+            {player.map((p,index)=>{
+                return <li key={index}>{p}</li>
+            })}
+        </ul>
+
+        <input id='box' type='text' placeholder='Enter name' />
+        <button onClick={handleClick} >Submit</button>
     </div>
   )
 }

@@ -1,12 +1,9 @@
 import React from 'react'
-import Event from './Components/Event';
-import Color from './Components/Color/Color';
-import { Update } from './Components/Update';
-import Games from './Components/Games';
+import MyComp from './Components/MyComp';
 const App = () => {
   return (
     <div>
-      <Games/>
+      <MyComp/>
     </div>
   )
 }

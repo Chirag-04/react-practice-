@@ -9,12 +9,15 @@ export const Update = () => {
         // setPlayer([...player ,newName]);
         setPlayer((prevArray)=>[...prevArray , newName])
     }
+    const handleRemoveClick=(index)=>{
+        setPlayer((prevArray)=> prevArray.filter((element,i)=> index!=i))
+    }
   return (
     <div>
         <h1>List of Cricketers</h1>
         <ul>
             {player.map((p,index)=>{
-                return <li key={index}>{p}</li>
+                return <li key={index} onClick={()=>handleRemoveClick(index)}>{p}</li>
             })}
         </ul>
 
